@@ -1,0 +1,3 @@
+SELinux Mode: Enforcing
+Root Binary Search:
+/system/xbin/su

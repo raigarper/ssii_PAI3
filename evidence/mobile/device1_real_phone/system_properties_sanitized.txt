@@ -1,0 +1,8 @@
+Device: Google Pixel 6a (BYOD Personal Terminal)
+Serial (Sanitized): 28231JEG*****
+Android Version: 17
+Security Patch: 2026-09-05
+SELinux Mode: Enforcing
+Sideloading Setting: 1
+Active Sockets Monitored: 24
+User Installed Applications: 98 (Audited - No malicious signatures)

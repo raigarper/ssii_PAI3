@@ -1,0 +1,26 @@
+{
+  "DefaultSearchProviderEnabled": true,
+  "PasswordManagerEnabled": false,
+  "AutofillAddressEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "SafeBrowsingProtectionLevel": 2,
+  "HttpsOnlyMode": "force_enabled",
+  "SSLErrorOverrideAllowed": false,
+  "ExtensionInstallBlocklist": ["*"],
+  "ExtensionInstallAllowlist": ["cjpalhdlnbpafiamejdnhcphjbkeiagm"],
+  "ExtensionInstallForcelist": [
+    "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx"
+  ],
+  "DefaultGeolocationSetting": 2,
+  "DefaultNotificationsSetting": 2,
+  "DefaultMediaStreamSetting": 2,
+  "DefaultSensorsSetting": 2,
+  "DefaultCookiesSetting": 1,
+  "BlockThirdPartyCookies": true,
+  "NetworkPredictionOptions": 2,
+  "MetricsReportingEnabled": false,
+  "DnsOverHttpsMode": "automatic",
+  "DnsOverHttpsTemplates": "https://cloudflare-dns.com/dns-query",
+  "WebRtcUdpPortRange": "0-0",
+  "ClearBrowsingDataOnExitList": ["cached_images_and_files"]
+}

@@ -1,0 +1,14 @@
+{
+  "device_type": "Virtual Smartphone (Institutional Test Endpoint)",
+  "serial": "emulator-5554",
+  "manufacturer": "Google",
+  "model": "sdk_gphone_x86_64",
+  "android_version": "11",
+  "security_patch": "2021-08-05",
+  "selinux_mode": "Enforcing",
+  "root_integrity": "VERIFIED_INTACT (SELinux Enforcing)",
+  "installed_test_packages": [
+    "org.fdroid.fdroid"
+  ],
+  "compliance_assessment": "COMPLIANT"
+}

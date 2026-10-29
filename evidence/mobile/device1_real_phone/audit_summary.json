@@ -1,0 +1,16 @@
+{
+  "device_type": "Physical Smartphone (BYOD)",
+  "masked_serial": "28231JEG*****",
+  "manufacturer": "Google",
+  "model": "Pixel 6a",
+  "android_version": "17",
+  "security_patch": "2026-09-05",
+  "selinux_mode": "Enforcing",
+  "root_integrity": "VERIFIED_INTACT (SELinux Enforcing, su binary absent)",
+  "sideloading_baseline": "1",
+  "sideloading_post_hardening": "0 (Hardened)",
+  "active_network_sockets_count": 24,
+  "third_party_apps_count": 98,
+  "malware_scan_assessment": "CLEAN (0 malicious signatures detected)",
+  "compliance_assessment": "COMPLIANT"
+}

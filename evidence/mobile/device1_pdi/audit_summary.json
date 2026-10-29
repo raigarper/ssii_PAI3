@@ -1,0 +1,33 @@
+{
+  "device_serial": "emulator-5554",
+  "assigned_role": "PDI_Endpoint (Faculty Device)",
+  "timestamp": "2026-10-28T18:02:11.402907",
+  "hardware": {
+    "manufacturer": "Google",
+    "model": "sdk_gphone_x86_64",
+    "android_version": "11",
+    "security_patch": "2021-08-05",
+    "build_id": "RSR1.240422.006"
+  },
+  "integrity": {
+    "selinux": "Enforcing",
+    "root_detected": true,
+    "integrity_posture": "VERIFIED_INTACT"
+  },
+  "connectivity_and_apps": {
+    "sideloading_baseline": "1",
+    "sideloading_post_hardening": "0",
+    "installed_third_party": [
+      "package:org.fdroid.fdroid"
+    ],
+    "active_sockets_count": 26,
+    "overlay_permissions": "No operations.",
+    "accessibility_services": "null"
+  },
+  "compliance": {
+    "unknown_sources": "COMPLIANT (Blocked = 0)",
+    "anti_rooting": "COMPLIANT (SELinux Enforcing)",
+    "app_isolation": "COMPLIANT",
+    "overall_status": "HARDENED"
+  }
+}

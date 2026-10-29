@@ -1,0 +1,26 @@
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program Name
+tcp        0      0 10.0.2.16:54636         172.217.114.4:443       TIME_WAIT   -
+tcp        0      0 10.0.2.16:51552         142.251.152.120:443     ESTABLISHED -
+tcp        0      0 10.0.2.16:57170         142.251.155.120:443     TIME_WAIT   -
+tcp        0      0 10.0.2.16:41984         142.251.156.119:443     ESTABLISHED -
+tcp6       1      0 ::ffff:10.0.2.16:43916  ::ffff:172.217.114.:443 CLOSE_WAIT  -
+tcp6       1      0 ::ffff:10.0.2.16:48948  ::ffff:172.217.114.:443 CLOSE_WAIT  -
+tcp6       1      0 ::ffff:10.0.2.16:38130  ::ffff:216.58.206.3:443 CLOSE_WAIT  -
+tcp6       1      0 ::ffff:10.0.2.16:43130  ::ffff:172.217.114.:443 CLOSE_WAIT  -
+tcp6       1      0 ::ffff:10.0.2.16:52202  ::ffff:172.217.117.:443 CLOSE_WAIT  -
+tcp6       0      0 ::ffff:10.0.2.16:55814  ::ffff:172.217.119.:443 ESTABLISHED -
+tcp6       0      0 ::ffff:10.0.2.16:53536  ::ffff:172.217.117.:443 TIME_WAIT   -
+tcp6       0      0 ::ffff:10.0.2.16:55816  ::ffff:172.217.119.:443 ESTABLISHED -
+tcp6       1      0 ::ffff:10.0.2.16:35222  ::ffff:66.102.1.100:443 CLOSE_WAIT  -
+tcp6       1      0 ::ffff:10.0.2.16:38142  ::ffff:216.58.206.3:443 CLOSE_WAIT  -
+tcp6       0      0 ::ffff:10.0.2.16:48470  ::ffff:142.250.110.:443 ESTABLISHED -
+tcp6       0      0 ::ffff:10.0.2.16:55800  ::ffff:172.217.113.:443 ESTABLISHED -
+tcp6       0      0 ::ffff:10.0.2.16:54236  ::ffff:64.233.184.:5228 ESTABLISHED -
+tcp6       0      0 ::ffff:10.0.2.16:43176  ::ffff:216.58.205.1:443 TIME_WAIT   -
+tcp6       1      0 ::ffff:10.0.2.16:43904  ::ffff:172.217.114.:443 CLOSE_WAIT  -
+tcp6       0      0 ::ffff:10.0.2.16:48394  ::ffff:172.217.117.:443 ESTABLISHED -
+tcp6       0      0 ::ffff:10.0.2.16:36740  ::ffff:172.217.114.:443 ESTABLISHED -
+tcp6       0      0 ::ffff:10.0.2.16:52974  ::ffff:216.58.204.1:443 TIME_WAIT   -
+tcp6       1      0 ::ffff:10.0.2.16:52536  ::ffff:172.217.117.:443 CLOSE_WAIT  -
+tcp6       0      0 ::ffff:10.0.2.16:60064  ::ffff:216.58.205.3:443 TIME_WAIT   -

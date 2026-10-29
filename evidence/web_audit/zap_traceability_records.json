@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-10-28T12:50:21.379498+00:00",
+    "method": "GET",
+    "url": "http://127.0.0.1:3000/",
+    "path": "http://127.0.0.1:3000/",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "Host": "127.0.0.1:3000",
+      "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Corporate Browser",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "close"
+    },
+    "request_body_length": 0,
+    "response_status": 200,
+    "response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Feature-Policy": "payment 'self'",
+      "X-Recruiting": "/#/jobs",
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "public, max-age=0",
+      "Last-Modified": "Wed, 28 Oct 2026 12:50:18 GMT",
+      "ETag": "W/\"2700-1a1828fb5f5\"",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Content-Length": "9984",
+      "Vary": "Accept-Encoding",
+      "Date": "Wed, 28 Oct 2026 12:50:21 GMT",
+      "Connection": "close"
+    },
+    "response_body_length": 9984,
+    "duration_ms": 18.76,
+    "traceability_check": "VERIFIED_UNMODIFIED"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-10-28T12:50:21.406308+00:00",
+    "method": "GET",
+    "url": "http://127.0.0.1:3000/#/login",
+    "path": "http://127.0.0.1:3000/#/login",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "Host": "127.0.0.1:3000",
+      "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Corporate Browser",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "close"
+    },
+    "request_body_length": 0,
+    "response_status": 200,
+    "response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Feature-Policy": "payment 'self'",
+      "X-Recruiting": "/#/jobs",
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "public, max-age=0",
+      "Last-Modified": "Wed, 28 Oct 2026 12:50:18 GMT",
+      "ETag": "W/\"2700-1a1828fb5f5\"",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Content-Length": "9984",
+      "Vary": "Accept-Encoding",
+      "Date": "Wed, 28 Oct 2026 12:50:21 GMT",
+      "Connection": "close"
+    },
+    "response_body_length": 9984,
+    "duration_ms": 5.26,
+    "traceability_check": "VERIFIED_UNMODIFIED"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-10-28T12:50:21.419664+00:00",
+    "method": "GET",
+    "url": "http://127.0.0.1:3000/rest/products/search?q=",
+    "path": "http://127.0.0.1:3000/rest/products/search?q=",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "Host": "127.0.0.1:3000",
+      "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Corporate Browser",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "close"
+    },
+    "request_body_length": 0,
+    "response_status": 200,
+    "response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Feature-Policy": "payment 'self'",
+      "X-Recruiting": "/#/jobs",
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "26963",
+      "ETag": "W/\"6953-nru2whpLWu1CthlP8tJW9z/SdIc\"",
+      "Vary": "Accept-Encoding",
+      "Date": "Wed, 28 Oct 2026 12:50:21 GMT",
+      "Connection": "close"
+    },
+    "response_body_length": 26963,
+    "duration_ms": 28.85,
+    "traceability_check": "VERIFIED_UNMODIFIED"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-10-28T12:50:21.458992+00:00",
+    "method": "GET",
+    "url": "http://127.0.0.1:3000/api/SecurityQuestions/",
+    "path": "http://127.0.0.1:3000/api/SecurityQuestions/",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "Host": "127.0.0.1:3000",
+      "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Corporate Browser",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "close"
+    },
+    "request_body_length": 0,
+    "response_status": 200,
+    "response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Feature-Policy": "payment 'self'",
+      "X-Recruiting": "/#/jobs",
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "1934",
+      "ETag": "W/\"78e-meQhajJmiMrlLXwpsBWRwqEBpjE\"",
+      "Vary": "Accept-Encoding",
+      "Date": "Wed, 28 Oct 2026 12:50:21 GMT",
+      "Connection": "close"
+    },
+    "response_body_length": 1934,
+    "duration_ms": 40.61,
+    "traceability_check": "VERIFIED_UNMODIFIED"
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-10-28T12:50:21.507530+00:00",
+    "method": "GET",
+    "url": "http://127.0.0.1:3000/assets/public/favicon_js.ico",
+    "path": "http://127.0.0.1:3000/assets/public/favicon_js.ico",
+    "request_headers": {
+      "Accept-Encoding": "identity",
+      "Host": "127.0.0.1:3000",
+      "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) Corporate Browser",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "close"
+    },
+    "request_body_length": 0,
+    "response_status": 200,
+    "response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Feature-Policy": "payment 'self'",
+      "X-Recruiting": "/#/jobs",
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "public, max-age=0",
+      "Last-Modified": "Mon, 12 Oct 2026 14:50:15 GMT",
+      "ETag": "W/\"3aee-1a13097c458\"",
+      "Content-Type": "image/x-icon",
+      "Content-Length": "15086",
+      "Vary": "Accept-Encoding",
+      "Date": "Wed, 28 Oct 2026 12:50:21 GMT",
+      "Connection": "close"
+    },
+    "response_body_length": 15086,
+    "duration_ms": 4.28,
+    "traceability_check": "VERIFIED_UNMODIFIED"
+  }
+]

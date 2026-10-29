@@ -1,0 +1,5 @@
+Device: Google sdk_gphone_x86_64 (Institutional Virtual Test Endpoint)
+Android Version: 11
+Security Patch: 2021-08-05
+SELinux Mode: Enforcing
+Installed Test Package: org.fdroid.fdroid

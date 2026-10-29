@@ -1,0 +1,4 @@
+# Lynis Custom Profile for PAI-3 (Universidad Publica U-Secure)
+skip-test=FILE-6310
+skip-test=STRG-1846
+skip-test=BOOT-5122

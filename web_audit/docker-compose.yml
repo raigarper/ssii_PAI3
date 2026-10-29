@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # Lab Option A: OWASP Juice Shop (Modern JS / REST / Angular lab)
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: pai3_juice_shop
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  # Lab Option B: Damn Vulnerable Web Application (Classic PHP / MySQL lab)
+  dvwa:
+    image: vulnerables/web-dvwa:latest
+    container_name: pai3_dvwa
+    ports:
+      - "8080:80"
+    restart: unless-stopped

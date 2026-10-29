@@ -1,0 +1,5 @@
+Manufacturer: Google
+Model: sdk_gphone_x86_64
+Android Version: 11
+Security Patch: 2021-08-05
+Build ID: RSR1.240422.006

